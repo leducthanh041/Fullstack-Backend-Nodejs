@@ -14,7 +14,7 @@ app.set("view engine", "ejs");
 
 // route declaration
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  res.send("Hello World! and nodemon");
 });
 
 app.get("/hoidanit", (req, res) => {
