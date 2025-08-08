@@ -1,7 +1,9 @@
 const connection = require("../config/database");
+const { getAllUsers } = require("../services/CRUDService");
 
-const getHomePage = (req, res) => {
-  return res.render("home.ejs");
+const getHomePage = async (req, res) => {
+  let results = await getAllUsers();
+  return res.render("home.ejs", { listUsers: results });
 };
 
 const getHoiDanIT = (req, res) => {
@@ -22,7 +24,7 @@ const postCreateUser = async (req, res) => {
 
   console.log(`>>> check results: ${results}`);
 
-  res.send("Created user succeed!");  
+  res.send("Created user succeed!");
 };
 
 const getCreatePage = (req, res) => {
