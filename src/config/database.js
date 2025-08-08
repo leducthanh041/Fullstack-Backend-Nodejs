@@ -1,5 +1,5 @@
 require("dotenv").config(); // IMPORT ĐỂ SỬ DỤNG CÚ PHÁP PROCESS.ENV
-const mysql = require("mysql2");
+const mysql = require("mysql2/promise");
 
 // create the connection to database
 // const connection = mysql.createConnection({
