@@ -1,0 +1,32 @@
+###############Tạo repository mới####################
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin <đường link tới git dự án>
+git push -u origin main
+###################################
+git checkout -b <Tên branch mới> 
+git add . hoặc git add <tên file 1> <tên file 2> .... để thêm 
+git commit -m "Commit gì đó" 
+git push origin -u <Tên branch mới>  (nếu ko phải lần đầu thì bỏ -u) 
+vào github, chọn compare and pull request, chọn tạo pull request vào branch dev (cấm merge vào branch main)
+
+- Nếu không chỉ định trước đơn vị tính cần SỬA mà đã bấm vào CHỈNH SỬA sẽ bị nổ app
+- Nếu không chỉ định trước đơn vị tính cần XOÁ mà đã bấm vào XOÁ sẽ bị nổ app
+
+Để chuyển sang một nhánh (branch) đã được tạo sẵn trong GitHub bằng lệnh trên terminal, bạn dùng lệnh sau:
+git checkout tên-nhánh
+
+Hoặc, nếu bạn dùng Git version mới (từ 2.23 trở lên), bạn có thể dùng:
+git switch tên-nhánh
+
+### Một số lưu ý:
+- Nếu nhánh chưa có local (chỉ có trên remote), bạn cần fetch trước:
+  git fetch
+
+  Sau đó:
+  git checkout tên-nhánh
+
+  hoặc
+  git checkout -b tên-nhánh origin/tên-nhánh

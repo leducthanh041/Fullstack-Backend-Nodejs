@@ -1,0 +1,20 @@
+# API guide line
+TRƯỚC TIÊN TẢI POSTMAN TRƯỚC
+- b1: Khai báo file route (với phương thức initAPIRoute)
+- b2: Khai báo file Controller (tên file APIController, khai báo các phương thức - GET cần thiết)
+- b3: Test trong postman
+file JSON thường được sử dụng cho API
+# Dùng API để lấy dữ liệu
+- b1: Khai báo hàm trong APIController
+- b2: trong file route, khai báo phương thức post 
+- b3: sử dụng câu truy vấn ở trong hàm vừa khai báo trong APIController
+
+# Dùng API để sửa dữ liệu
+- b1: trong file route, khai báo phương thức put
+- b2: Khai báo hàm trong APIController
+- b3: sử dụng câu truy vấn ở trong hàm vừa khai báo trong APIController
+
+# Dùng API để xoá dữ liệu
+- b1: trong file route, khai báo phương thức delete
+- b2: Khai báo hàm trong APIController
+- b3: sử dụng câu truy vấn ở trong hàm vừa khai báo trong APIController

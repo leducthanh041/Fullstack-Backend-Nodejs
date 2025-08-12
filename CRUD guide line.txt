@@ -1,0 +1,31 @@
+# Các bước thực hiện lấy dữ liệu:
+- b1: tạo giao diện (frontend). -> file ejs
+- b2: Tạo router (/đường-dẫn) cùng với phương thức (hàm, module) cần thực hiện.
+- b3: vào homeController, định nghĩa các phương thức (hàm, module) vừa tạo.
+- b4: Lấy data từ phía frontend (dữ liệu được nhập bởi users)
+	+ Nhớ khai báo app.use(express.json()); // for json && app.use(express.urlencoded({ extended: true })); // for form data
+- b5: Khởi tạo kết nối với database
+- b6: Thêm câu truy vấn, truy cập trang npm mysql2 với nhiều thông tin hơn, để lưu dữ liếu xuống database
+
+# Các bước thực hiện hiển thị dữ liệu lên frontend
+- b1: Tạo và định nghĩa phương thức get để lấy dữ liệu trong homeController
+- b2: Ghi câu truy vấn trong phương thức getHomePage (homeController file)
+	+ using <%= JSON.stringify(listUsers) %> to show data on màn hình
+- b3: dùng vòng lặp cùng với <%= EJS > để xuất dữ liệu lên màn hình (dùng for each cho tường minh)
+
+# Các bước thực hiện cập nhật dữ liệu:
+- b1: tạo giao diện (frontend). -> file ejs
+- b2: Tạo router (/đường-dẫn) lấy dữ liệu cùng với phương thức (hàm, module) cần thực hiện.
+- b3: vào homeController, định nghĩa các phương thức (hàm, module) vừa tạo.
+- b4: chuyển đổi thẻ button thành thẻ a (trường hợp riêng thôi) trong home
+- b5: "Lấy động" (cần khai báo /:id) id của dữ liệu cần sửa cho route (mỗi id là mỗi route khác nhau) - định nghĩa ở file web.js trước
+- b6: kết nối với database, sử dụng câu truy vấn để lấy data user (khuyến khích khai bảo ở service để giống với mô hình MVC)
+- b7: Tạo router (/đường-dẫn) cập nhật dữ liệu cùng với phương thức (hàm, module) cần thực hiện.
+- b8: vào homeController, định nghĩa các phương thức (hàm, module) vừa tạo, sử dụng câu truy vấn UPDATE.
+
+# Các bước thực hiện DELETE dữ liệu:
+- b1: tạo giao diện (frontend). -> file ejs
+- b2: Tạo router (/đường-dẫn) lấy dữ liệu cùng với phương thức (hàm, module) cần thực hiện.
+- b3: vào homeController, định nghĩa các phương thức (hàm, module) vừa tạo.
+- b4: chuyển đổi thẻ button thành thẻ form (trường hợp riêng thôi) trong home
+- b5: "Lấy động" (cần khai báo /:id) id của dữ liệu cần sửa cho route (mỗi id là mỗi route khác nhau) - định nghĩa ở file web.js trước
