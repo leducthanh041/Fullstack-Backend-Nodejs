@@ -1,1 +1,5 @@
-UPLOAD FILE VỚI NODE.JS VÀ EXPRESS
+# UPLOAD FILE VỚI NODE.JS VÀ EXPRESS
+link github: https://github.com/haryphamdev/node-js-basic-hoidanit/tree/dev
+Single file first
+- b1: tạo file views
+- b2: khai báo route
